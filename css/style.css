@@ -1,0 +1,218 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(0, 0, 46);
+}
+body::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    height: 70%;
+    background: url(../img/bg-desktop.png) no-repeat;
+    background-size:100% 80%;
+    background-position: bottom;
+    z-index: -1;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 31vh;
+    z-index: 1;
+}
+.logo {
+    background-color: rgb(23, 23, 87);
+    width: 18rem;
+    height: 25vh;
+    padding: 5vh;
+    border-radius: 10px;
+    border-top-right-radius: 50px;
+}
+.logo .icons {
+    margin-top: 10px;
+}
+.logo .icons i {
+    font-size: 1.3rem;
+    color: gray;
+    margin: 5px;
+    padding: .8rem;
+    border-radius: 10px;
+    background: rgb(1, 0, 22);
+}
+.download {
+    background-color: rgb(23, 23, 87);
+    border-radius: 10px;
+    height: 20vh;
+    width: 28rem;
+    margin-top: 5vh;
+    margin-left: 20px;
+}
+.download .head {
+    color: gray;
+    font-size: 15px;
+    margin: 30px 0px 0px 30px;
+}
+.download .bar {
+    height: 15px;
+    border-radius: 1rem;
+    width: 25em;
+    margin: 14px 0 0 30px;
+    padding: 2px 0px 0px 3px;
+    background:rgb(0, 1, 36);
+}
+.download .bar_p {
+    display: block;
+    background: red ;
+    height: 11px;
+    border-radius: .8rem;
+}
+.download .bar_p::before {
+    content: '';
+    width: 25px;
+    position:fixed;
+    margin-left: 18.7rem;
+    margin-top: -6px;
+    height: 25px;
+    clip-path: circle(20%);
+    background-color: white;
+}
+.download .text {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 25px;
+}
+.download .text h1 {
+    color: white;
+    font-size: 15px;
+    padding-top: 10px;
+}
+.download .comment {
+    position: fixed;
+    margin-top: -80px;
+    margin-left: 17rem ;
+    width: 10rem;
+    height: 10vh;
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.download .comment::after {
+    content: '';
+    background: white;
+    position: fixed;
+    width: 30px;
+    height: 40px;
+    margin-top: 70px;
+    margin-left: 130px;
+    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 100%, 100% 100%, 0 34%, 0 0);
+}
+.download .comment h1 {
+    font-size: 15px;
+    color: gray;
+}
+.download .comment h1 span {
+    font-size: 30px;
+    color: black;
+}
+@media (min-width:451px) and (max-width:770px) {
+    body {
+        background: url(../img/bg-mobile.png)no-repeat;
+        background-size: cover;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    body::after {
+        display: none;
+    }
+    .main {
+        display: block;
+    }
+    .download .bar_p::before {
+        margin-left: 8.80rem;
+        margin-top: -6.5px;
+    }
+    .logo {
+        background-color: rgb(23, 23, 87);
+        width: 18rem;
+        height: 25vh;
+        margin-left: 19%;
+    }
+    .download {
+        margin-top: 5vh;
+        margin-left: 0;
+    }
+    .download .head {
+        color: gray;
+        font-size: 15px;
+        padding: 40px 0px 0px 30px;
+    }
+    .download .comment {
+        margin-top: 70px;
+        margin-left: 17rem ;
+    }
+    .download .comment::after {
+        display: none;
+    }
+}
+@media (max-width:450px) {
+    .logo {
+        background-color: rgb(23, 23, 87);
+        width: 18rem;
+        height: 25vh;
+        padding: 5vh;
+        margin: 21px;
+        border-radius: 10px;
+        border-top-right-radius: 50px;
+    }    
+    .download {
+        width: 18rem;
+    }
+    body {
+        background: url(../img/bg-mobile.png)no-repeat;
+        background-size: 100vh;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    body::after {
+        display: none;
+    }
+    .main {
+        display: block;
+    }
+    .download .bar_p::before {
+        margin-left: 3.90rem;
+        margin-top: -6.5px;
+    }
+    .download .head {
+        color: gray;
+        font-size: 15px;
+        padding: 40px 0px 0px 0px;
+    }
+    .download .comment {
+        margin-top: 70px;
+        margin-left: 3rem ;
+    }
+    .download .comment::after {
+        display: none;
+    }
+    .download .bar {
+        height: 15px;
+        border-radius: 1rem;
+        width: 13em;
+        margin: 14px 0 0 50px;
+        padding: 2px 0px 0px 4px;
+        background:rgb(0, 1, 36);
+    }
+}
